@@ -1,5 +1,7 @@
 # Donation Platform
 
+## Add 3 Project features
+
 ### 1. Browse Donation Projects
 
 - Easily browse through a wide range of donation projects, each categorized under health, education, clothing, and food. View project details, including images, descriptions, and prices.
