@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import DonationCard from "./DonationCard";
 
 const Donation = () => {
   const [donation, setDonation] = useState([]);
@@ -14,8 +15,8 @@ const Donation = () => {
       );
     }
   }, []);
-  console.log(noDataFound);
-  console.log(donation);
+  // console.log(noDataFound);
+  // console.log(donation);
 
   return (
     <div>
@@ -24,8 +25,10 @@ const Donation = () => {
           {noDataFound}
         </p>
       ) : (
-        <div>
-          <h1>thanks for donation</h1>
+        <div className=" grid grid-cols-1 lg:grid-cols-2 container mx-auto px-8 md:px-10 lg:px-24 p-5 my-10 gap-6">
+          {donation?.map((donation) => (
+            <DonationCard key={donation.id} donation={donation}></DonationCard>
+          ))}
         </div>
       )}
     </div>
