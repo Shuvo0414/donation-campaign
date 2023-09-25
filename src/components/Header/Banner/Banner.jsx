@@ -1,8 +1,20 @@
+import bannerBg from "../../../assets/FB_IMG_1695618253156.jpg";
+
+const bannerStyle = {
+  backgroundImage: `url(${bannerBg})`,
+  backgroundSize: "cover",
+  backgroundBlendMode: "color-black",
+  backgroundColor: "rgba(255, 255, 255, 0.95)",
+};
+
 const Banner = () => {
   return (
-    <div>
-      <div className=" container mx-auto px-8 md:px-10 lg:px-24 p-5 my-10 md:mt-36">
-        <h1 className="  text-xl md:text-5xl font-bold text-center">
+    <div
+      className=" bg-blend-overlay   w-full h-full md:w-[80%] md:h-[60vh] container mx-auto px-8 md:px-10 lg:px-24 p-5 my-10 md:mt-36 "
+      style={bannerStyle}
+    >
+      <div>
+        <h1 className=" mt-40 text-xl md:text-5xl font-bold text-center">
           I Grow By Helping People In Need
         </h1>
         <div className=" mx-auto flex justify-center items-center mt-4 md:mt-10">

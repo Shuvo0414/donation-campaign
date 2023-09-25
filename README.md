@@ -1,8 +1,13 @@
-# React + Vite
+# Donation Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 1. Browse Donation Projects
 
-Currently, two official plugins are available:
+- Easily browse through a wide range of donation projects, each categorized under health, education, clothing, and food. View project details, including images, descriptions, and prices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 2. Make Donations
+
+- Contribute to your chosen projects by making donations directly through the platform. We offer a secure and seamless payment process to ensure your contributions reach those in need.
+
+### 3. Track Your Impact
+
+- Stay informed about the impact of your donations. Our platform provides regular updates and reports on the progress of each project you've supported, including how your contributions have made a difference in people's lives.
