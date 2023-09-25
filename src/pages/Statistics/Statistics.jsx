@@ -12,14 +12,11 @@ const Statistics = () => {
     setYourDonations(yourDonationCount);
   }, []);
 
-  // Calculate the percentage of donations fulfilled
   const percentageFulfilled =
     yourDonations !== 0 ? ((yourDonations / 100) * 100).toFixed(1) : 0;
 
-  // Calculate the percentage of donations remaining
   const percentageRemaining = 100 - percentageFulfilled;
 
-  // Create data for the pie chart
   const data = [
     { name: "Your Donation", value: percentageFulfilled },
     { name: "Total Donation", value: percentageRemaining },
