@@ -4,9 +4,7 @@ import NavBar from "../components/Header/Navbar/NavBar";
 const MainLayout = () => {
   return (
     <div>
-      <section className="">
-        <NavBar></NavBar>
-      </section>
+      <NavBar></NavBar>
       <Outlet></Outlet>
     </div>
   );
