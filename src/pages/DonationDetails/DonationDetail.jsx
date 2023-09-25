@@ -9,6 +9,21 @@ const DonationDetail = ({ donation }) => {
     backgroundColor: btn_bg,
   };
   const handleDonateBtn = () => {
+    const addedStoreDonationDataInArray = [];
+    const storeDonationData = JSON.parse(localStorage.getItem("donations"));
+    if (!storeDonationData) {
+      addedStoreDonationDataInArray.push(donation);
+      localStorage.setItem(
+        "donations",
+        JSON.stringify(addedStoreDonationDataInArray)
+      );
+    } else {
+      addedStoreDonationDataInArray.push(...storeDonationData, donation);
+      localStorage.setItem(
+        "donations",
+        JSON.stringify(addedStoreDonationDataInArray)
+      );
+    }
     swal("Thank you for your generous donation!");
   };
 
