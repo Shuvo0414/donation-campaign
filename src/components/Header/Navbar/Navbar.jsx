@@ -5,9 +5,9 @@ const NavBar = () => {
   return (
     <div>
       <nav className=" flex justify-between items-center container mx-auto px-8 md:px-10 lg:px-24 p-5 my-10">
-        <img className=" w-[35px] md:w-[230px]" src={logo} alt="logo" />
+        <img className=" w-[115px] md:w-[230px]" src={logo} alt="logo" />
         <ul className=" text-lg flex gap-7">
-          <li>
+          <li className=" text-sm md:text-lg lg:text-lg">
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
@@ -21,7 +21,7 @@ const NavBar = () => {
               Home
             </NavLink>
           </li>
-          <li>
+          <li className="text-sm md:text-lg lg:text-lg">
             <NavLink
               to="/donation"
               className={({ isActive, isPending }) =>
@@ -35,7 +35,7 @@ const NavBar = () => {
               Donation
             </NavLink>
           </li>
-          <li>
+          <li className="text-sm md:text-lg lg:text-lg">
             <NavLink
               to="/statistics"
               className={({ isActive, isPending }) =>

@@ -23,7 +23,7 @@ const Banner = ({
       style={bannerStyle}
     >
       <div>
-        <h1 className=" mt-40 text-xl md:text-5xl font-bold text-center">
+        <h1 className=" mt-5 md:mt-20 lg:mt-40 text-xl md:text-5xl font-bold text-center">
           I Grow By Helping People In Need
         </h1>
         <div className=" mx-auto flex justify-center items-center mt-4 md:mt-10">
