@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import swal from "sweetalert";
 
 const DonationDetail = ({ donation }) => {
-  const { id, img, title, description, price, btn_bg } = donation;
+  const { img, title, description, price, btn_bg } = donation;
   //   console.log(donation);
 
   const btnStyle = {
@@ -29,7 +29,6 @@ const DonationDetail = ({ donation }) => {
 
   return (
     <div className="container mx-auto px-8 md:px-10 lg:px-24 p-5 my-10">
-      <h1>donation : {id}</h1>
       <div>
         <div>
           <div className=" relative">
