@@ -15,7 +15,7 @@ const Statistics = () => {
   const totalDonations = 12;
 
   const percentageFulfilled = (yourDonations / totalDonations) * 100;
-  console.log(percentageFulfilled);
+  // console.log(percentageFulfilled);
 
   const percentageRemaining = 100 - percentageFulfilled;
 
@@ -23,6 +23,32 @@ const Statistics = () => {
     { name: "Your Donations", value: percentageFulfilled },
     { name: "Total Donation", value: percentageRemaining },
   ];
+
+  const RADIAN = Math.PI / 180;
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+  }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+    return (
+      <text
+        x={x}
+        y={y}
+        fill="white"
+        textAnchor={x > cx ? "start" : "end"}
+        dominantBaseline="central"
+      >
+        {`${(percent * 100).toFixed(1)}%`}
+      </text>
+    );
+  };
 
   return (
     <div className="container mx-auto px-8 md:px-10 lg:px-24 p-5 my-10">
@@ -36,7 +62,8 @@ const Statistics = () => {
             cy="50%"
             outerRadius={120}
             fill="#8884d8"
-            label={({ value }) => ` ${value.toFixed(1)}%`}
+            label={renderCustomizedLabel}
+            labelLine={false}
           >
             {data.map((entry, index) => (
               <Cell
