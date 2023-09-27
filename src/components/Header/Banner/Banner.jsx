@@ -19,16 +19,16 @@ const Banner = ({
   // console.log(handleCategoryChange);
   return (
     <div
-      className=" bg-blend-overlay   w-full h-full md:w-[80%] md:h-[60vh] container mx-auto px-8 md:px-10 lg:px-24 p-5 my-10 md:mt-36 "
+      className=" bg-blend-overlay   w-full h-full  lg:h-[60vh]  mx-auto px-8 md:px-10 lg:px-24 p-5 my-10  object-cover "
       style={bannerStyle}
     >
       <div>
-        <h1 className=" mt-5 md:mt-20 lg:mt-40 text-xl md:text-5xl font-bold text-center">
+        <h1 className=" mt-5 md:mt-20 lg:mt-48 text-xl md:text-4xl lg:text-5xl font-bold text-center">
           I Grow By Helping People In Need
         </h1>
         <div className=" mx-auto flex justify-center items-center mt-4 md:mt-10">
           <input
-            className=" w-[230px] md:w-[470px] px-2 md:px-4 py-2 md:py-4 rounded-lg border border-red-200  text-[#0B0B0B66]"
+            className=" w-[230px] md:w-[470px] px-2 md:px-4 py-2 md:py-4 rounded-lg border border-[#DEDEDE] text-[#0B0B0B66]"
             type="text"
             placeholder="Search here...."
             value={searchCategory}
