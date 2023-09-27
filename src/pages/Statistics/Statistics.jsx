@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import { PieChart, Pie, Cell, Legend } from "recharts";
 
 const COLORS = ["#00C49F", "#FF444A"];
 
 const Statistics = () => {
   const [yourDonations, setYourDonations] = useState(0);
+  const [totalDonations, settotalDonations] = useState(0);
+  const allDataDonation = useLoaderData();
+  // console.log(allDataDonation);
 
   useEffect(() => {
     const storedDonations = JSON.parse(localStorage.getItem("donations")) || [];
     const yourDonationCount = storedDonations.length;
     setYourDonations(yourDonationCount);
-  }, []);
-
-  const totalDonations = 12;
+    const totalDonationsCount = allDataDonation.length;
+    settotalDonations(totalDonationsCount);
+  }, [allDataDonation]);
 
   const percentageFulfilled = (yourDonations / totalDonations) * 100;
   // console.log(percentageFulfilled);
